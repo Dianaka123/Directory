@@ -2857,6 +2857,7 @@ GameObject:
   - component: {fileID: 4927973787200604}
   - component: {fileID: 95844511793012932}
   - component: {fileID: 114380782822982968}
+  - component: {fileID: 6577638878154596772}
   m_Layer: 0
   m_Name: Male
   m_TagString: Untagged
@@ -2945,6 +2946,19 @@ MonoBehaviour:
     - prefab: {fileID: 100000, guid: 790f4551bb671cc43bea7a0943c1162f, type: 3}
     slots: 4
   disabledGraySkeleton: {fileID: 0}
+--- !u!114 &6577638878154596772
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1668188202801692}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fa4ae28450cf421fb022cbfd807930b7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Hair: {fileID: 1901548758643278}
 --- !u!1 &1672909316657688
 GameObject:
   m_ObjectHideFlags: 0
