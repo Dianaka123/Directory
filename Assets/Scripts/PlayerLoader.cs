@@ -1,4 +1,5 @@
 using System;
+using System.IO;
 using UnityEngine;
 
 namespace DefaultNamespace
@@ -14,7 +15,6 @@ namespace DefaultNamespace
         private void Start()
         {
             config = Resources.Load<PlayersConfig>("Players");
-            Debug.Log(config);
             var names = config.Players;
             
             var countObject = names.Length;
@@ -31,8 +31,6 @@ namespace DefaultNamespace
                 var btn = Instantiate(baseButton, baseButton.transform.parent);
                 btn.Setup(names[i], OnPlayerButton);
             }
-            Destroy(baseButton.gameObject);
-            
         }
         
         private void OnPlayerButton(string id)
@@ -40,13 +38,15 @@ namespace DefaultNamespace
             if (currentObject != null)
             {
                 characterOptions.gameObject.SetActive(false);
+                characterOptions.DestroyOldButtons();
                 Destroy(currentObject);
             }
             var asset = config.GetPlayer(id);
             var obj = Instantiate(asset);
             
             characterOptions.gameObject.SetActive(true);
-            characterOptions.player = currentObject.GetComponent<MaterialInfo>();
+            
+            characterOptions.player = obj.GetComponent<MaterialInfo>();
             characterOptions.playerName = id;
             characterOptions.Info();
             

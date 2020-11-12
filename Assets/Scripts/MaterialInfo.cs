@@ -8,8 +8,8 @@ namespace DefaultNamespace
         
         public void ChangeColor(Texture mainTexture)
         {
-            var renderer = Hair.GetComponent<Renderer>();
-            renderer.material.SetTexture("_MainTex", mainTexture);
+            var renderer = Hair.GetComponent<SkinnedMeshRenderer>();
+            renderer.sharedMaterial.mainTexture = mainTexture;
         }
     }
 }

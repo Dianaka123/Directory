@@ -2958,7 +2958,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fa4ae28450cf421fb022cbfd807930b7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Hair: {fileID: 1901548758643278}
+  Hair: {fileID: 1031030421249682}
 --- !u!1 &1672909316657688
 GameObject:
   m_ObjectHideFlags: 0
